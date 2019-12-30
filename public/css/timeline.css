@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #eee;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.gallery {
+  width: 960px;
+  outline: 1px solid orange;
+}
+
+.gallery-item {
+  width: 48%;
+  display: inline-block;
+  margin-left: 1em;
+  outline: 1px solid red;
+}
+
+.gallery-item:first-child,
+.gallery-item:nth-of-type(3n) {
+  margin-left: 0;
+}
+
+.card {
+  margin-left: 0;
+  display: table;
+}
+
+.card__image {
+  width: 145px;
+  height: 145px;
+  background: #ff0066;
+}
+
+.card__image,
+.card__text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.card__image + .card__text {
+  padding-left: 1em;
+}
+
+.card__text {
+  margin-left: 1em;
+}
