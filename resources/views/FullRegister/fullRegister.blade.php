@@ -20,7 +20,7 @@
   <div class="settings_wrap">
     <label class="drop_target">
       <div class="image_preview"></div>
-      <input id="inputFile" name="image" type="file" accept="image/*"/>
+      <input id="inputFile" name="userImage" type="file" accept="image/*"/>
     </label>
       
       <div class="row">

@@ -14,9 +14,15 @@ class UserController extends Controller
 {
     public function index()
     {   
-        $users=profile::where('id',Auth::user()->id)->first();
+        $users=Profile::where('id',Auth::user()->id)->first();
         $blogs = Blog::where('ispublished',1)->get();
-        return view('timeline',compact('blogs','users'));
+        $filldetail=DB::table('blogs')
+        ->where('ispublished',1)
+    ->join('profiles','blogs.user_id','profiles.user_id')
+    ->select('blogs.*','profiles.userImage','profiles.fullName')
+    ->get();
+    //  return $filldetail;
+    return view('timeline2',compact(['blogs','users','filldetail']));
         
     }
     public function create()
@@ -49,7 +55,6 @@ public function manage(){
     ->where('users.id',Auth::user()->id)
     ->select('blogs.*','users.name')
     ->get();
-    
     return view('user.manage',compact('blogs','unposted'));
 }
 
@@ -111,30 +116,8 @@ public function storeProfile(Request $request)
         return redirect()->back();
     }
 
-    public function profile_edit(){
-        return view('profile.edit');
-    }
-    public function profile_store( Request $request){
-        
-        $imageFile = $request->file('image'); 
-        $imageName = $imageFile->getClientOriginalName();
-        $uploadPath = '../public/images/';
-        $imageFile->move($uploadPath, $imageName);
-        $imageFullPath = '/images/'.$imageName;
-        $id=Auth::user()->id;
-        $user= new Profile;
-        $user->user_id=$id;
-        $user->image=$imageFullPath;
-        $user->fullName=$request->fullName;
-        $user->userName=$request->userName;
-        $user->location=$request->location;
-        $user->age=$request->age;
-        $user->website=$request->website;
-        $user->about=$request->about;
-        //return $user;
-        $user->save();
-        return redirect('/profile');
- }
+    
+    
 
 }
 

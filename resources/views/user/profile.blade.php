@@ -29,7 +29,7 @@
 
 		<!-- twitter - el clásico  -->
 		<li>
-			<a href="https://www.facebook.com/v1ctory">
+			<a href="https://www.facebook.com">
                 <svg viewBox="0 0 24 24">
                     <path fill="#3b5998" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
                 </svg>
@@ -39,7 +39,7 @@
 		
 	</ul>
 
-	<a class="button3" href="/profile/edit"> Edit Profile </a>
+	<a class="button3" href="/profile/edit/{{$userinfo->user_id}}"> Edit Profile </a>
 </aside>
 <!-- that’s all folks! -->
     @endsection

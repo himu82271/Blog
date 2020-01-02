@@ -35,7 +35,7 @@ ul {
 }
 
 .card {
-  margin-left: 0;
+  margin-left: 200px;
   display: table;
 }
 
@@ -57,4 +57,9 @@ ul {
 
 .card__text {
   margin-left: 1em;
+}
+.userinfo{
+  width: 30px;
+    height: 30px;
+    background-color: black;
 }

@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="{{asset('js/timeline.js')}}" rel="stylesheet">
+    <link href="{{asset('js/timeline2.js')}}" rel="stylesheet">
+
     <link href="{{asset('js/create.js')}}" rel="stylesheet">
 
 
@@ -25,6 +27,9 @@
     <link href="{{asset('css/sidebar.css')}}" rel="stylesheet">
     <link href="{{asset('css/submitForm.css')}}" rel="stylesheet">
     <link href="{{asset('css/timeline.css')}}" rel="stylesheet">
+    <link href="{{asset('css/timeline2.css')}}" rel="stylesheet">
+
+
     <link href="{{asset('css/userProfile.css')}}" rel="stylesheet">
     <link href="{{asset('css/create.css')}}" rel="stylesheet">
     <link href="{{asset('css/profile.css')}}" rel="stylesheet">
@@ -103,7 +108,9 @@
                 
                 <div class="sidenav">
                         <a href="/user/profile">Profile</a>
-                        <a href="/timeline">Timeline</a>
+                        <a href="/timeline2">Timeline</a>
+
+                        {{-- <a href="/timeline">Timeline</a> --}}
                         <a href="/user/create">Create a post</a>
                         <a href="/user/manage">Manage Your Posts</a>
                         

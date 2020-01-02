@@ -4,14 +4,15 @@
 
 <div class="container">
     <div class="row justify-content-center">
+        
        
         <div class="col-md-8">
+           
             <div class="block">
-                {{-- <div class="picture">
-                    @foreach ($users as $user)
-                    <img style="width:170px" class="editable img-responsive" alt=" Avatar" id="avatar2" src="{{asset($users->image)}}">
-                    @endforeach
-                </div> --}}
+                <div class="userinfo">
+            
+                </div>
+               
                     <figure class="card">
                         
                     @foreach ($blogs as $blog)
